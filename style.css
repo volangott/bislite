@@ -1,0 +1,315 @@
+* 
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+
+
+body {
+
+    margin: 0; 
+    background-color: #e8ebf1;  
+
+  }
+
+.flex-container 
+  {         
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;      
+  }
+
+
+header 
+  {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    align-items: center;    
+  }
+
+.logo
+    {
+
+        flex-grow: 1;
+        text-align: left;
+      
+    }
+
+.menu
+    {
+    
+
+        text-align: right;
+        justify-content: flex-end;
+
+      
+    }
+
+
+.menu_flex
+     {
+        display: flex;
+        justify-content: flex-end;
+        border: black; 
+       
+     }
+.menu_flex li
+     {        
+        list-style: none;    
+
+     }
+
+.menu_flex li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+      }
+.menu_flex a 
+     {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 0 10px;
+        line-height: 40px;
+        transition: all .5s;
+        
+
+     }
+.menu_flex ul   
+     {
+        position: absolute;            
+        display: none;
+        text-align: left;
+        
+
+     }
+
+.menu_flex li:hover ul
+     {
+         display: block;
+
+         padding-bottom: 5px;
+     }
+
+.menu_contener
+     {
+         background-color: white;
+         border-bottom: 5px solid #2aacc8
+     }
+
+.menu_flex li:hover
+     {
+         
+        background-color: white;        
+     }   
+.menu_line
+     {
+         width: 200px;
+         padding-left:  5px;
+         padding-right: 5px;
+     }
+a:hover  
+     {
+         color: #2aacc8;
+     }
+
+.menu_border 
+     {
+        border-top: 5px solid transparent;
+     }
+
+.menu_border:hover   
+     {
+        border-top: 5px solid #2aacc8;
+     }
+
+.menu_drop 
+     {
+        
+        background-color: white;
+        border-bottom: 1px solid #eaeaea;
+        
+         
+     }
+.r90degre
+     {
+        
+        writing-mode: vertical-lr;
+        line-height: 20px;
+        height: 10px;
+        text-align: center;
+     }
+
+.flex-item 
+    {
+        display: flex;
+        flex-direction: row;
+ 
+
+
+              
+    }
+
+.item1 
+    {
+
+        width: 1000px;
+        height: 100px;
+
+        background-color: #e8ebf1;  
+        
+     
+    }
+
+
+
+
+.item2
+    {
+
+
+        padding-top: 20px;
+        background-color: #81e4ed;          
+    
+    }
+
+.item3
+    {
+        display: flex;
+        margin: auto;
+      
+
+
+        
+        text-align: left;
+        padding: 5px;
+
+
+  
+
+
+  
+
+
+
+        background-color: #e8ebf1;  
+    }
+
+.item3-column
+    {
+        flex-basis: 25%;
+        padding: 15px;
+    }
+
+.item4
+    {
+        display: flex;
+        flex-direction: column;
+        
+        height: 100px;
+        align-self: stretch;
+        text-align: left;
+        background-color: white;  
+    }
+
+    .hamb{
+        cursor: pointer;
+        float: right;
+        padding: 40px 20px;
+    }
+    
+    
+    .hamb-line {
+        background: var(--white);
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 24px;
+        
+    }
+    
+    .hamb-line::before,
+    .hamb-line::after{
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    
+    .hamb-line::before{
+        top: 5px;
+    }
+    
+    .hamb-line::after{
+        top: -5px;
+    }
+    
+    
+    .side-menu {
+        display: none;
+    }
+    
+    /* Toggle menu icon */
+    
+    .side-menu:checked ~ nav{
+        max-height: 100%;
+    }
+    
+    .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+    }
+    
+    .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top:0;
+    
+    }
+    
+    .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
+
+@media (min-width: 768px) 
+    {
+
+
+        .menu_flex
+            {
+                max-height: none;
+                top: 0;
+                position: relative;
+                float: right;
+                width: fit-content;
+                background-color: transparent;
+              
+            }
+
+        .menu li{
+                float: left;
+            }
+        
+        .menu a:hover{
+                background-color: transparent;
+                color: var(--grey);
+                
+            }
+            
+        
+        .hamb{
+            display: none;
+        }
+
+    }
+
